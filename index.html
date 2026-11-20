@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dolled by Dannie | Southfield Braider | Stitch Braids, Knotless Braids, Ponytails</title>
+<meta name="description" content="Dolled by Dannie is a Southfield and Detroit braider specializing in stitch braids, knotless braids, and ponytails. Hair included. Book your appointment online.">
+<meta property="og:title" content="Dolled by Dannie | Southfield Braider">
+<meta property="og:description" content="Stitch braids that stay neat for weeks. Hair included. Book online in Southfield / Detroit, MI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rishaofficial.github.io/dolled-by-dannie-demo/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dolled by Dannie | Southfield Braider">
+<meta name="twitter:description" content="Stitch braids that stay neat for weeks. Hair included. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #143C3C;
+    --teal-deep: #0D2A2A;
+    --teal-mid: #1E5555;
+    --teal-soft: #2F6B6B;
+    --cream: #FAF5EF;
+    --cream-dark: #F1E8DD;
+    --coral: #E07856;
+    --coral-dark: #C85F41;
+    --coral-soft: #F2A78F;
+    --ink: #1E2A2A;
+    --muted: #6E7B7B;
+    --white: #FFFFFF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* ---------- Falling Autumn Leaves ---------- */
+  .falling-leaf {
+    position: fixed;
+    top: -40px;
+    z-index: 90;
+    pointer-events: none;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: leaf-fall linear infinite;
+  }
+
+  @keyframes leaf-fall {
+    0% {
+      transform: translateY(-40px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.7;
+    }
+    90% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .falling-leaf {
+      display: none;
+    }
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(250, 245, 239, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(20, 60, 60, 0.1);
+  }
+
+  .header-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .logo {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: var(--teal);
+    line-height: 1;
+  }
+
+  .logo em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--coral);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    transition: color 0.2s;
+  }
+
+  nav a:hover {
+    color: var(--coral-dark);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 13px 26px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+  }
+
+  .btn-coral {
+    background: var(--coral);
+    color: var(--white);
+  }
+
+  .btn-coral:hover {
+    background: var(--coral-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(224, 120, 86, 0.35);
+  }
+
+  .btn-teal {
+    background: var(--teal);
+    color: var(--cream);
+  }
+
+  .btn-teal:hover {
+    background: var(--teal-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(20, 60, 60, 0.25);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--teal);
+    border: 1.5px solid var(--teal);
+  }
+
+  .btn-outline:hover {
+    background: var(--teal);
+    color: var(--cream);
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--teal);
+  }
+
+  /* ---------- Hero (editorial split) ---------- */
+  .hero {
+    padding: 150px 24px 0;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 6.5vw, 84px);
+    font-weight: 900;
+    color: var(--teal);
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--coral);
+  }
+
+  .hero-rule {
+    width: 72px;
+    height: 3px;
+    background: var(--coral);
+    margin: 28px 0;
+  }
+
+  .hero-sub {
+    max-width: 520px;
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .hero-actions {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-meta {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(20, 60, 60, 0.14);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+
+  .hero-panel {
+    aspect-ratio: 4/5;
+    border-radius: 4px;
+    background: linear-gradient(160deg, var(--teal-mid) 0%, var(--teal) 55%, var(--teal-deep) 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-panel::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(224, 120, 86, 0.45) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45%;
+    background: linear-gradient(to top, rgba(13, 42, 42, 0.75), transparent);
+  }
+
+  .photo-placeholder-tag {
+    position: relative;
+    z-index: 2;
+    border: 1.5px dashed rgba(250, 245, 239, 0.7);
+    border-radius: 12px;
+    padding: 18px 28px;
+    color: var(--cream);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .hero-panel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 24px;
+    color: var(--cream);
+  }
+
+  .hero-panel-caption strong {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    line-height: 1.15;
+  }
+
+  .hero-panel-caption span {
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  /* ---------- Section base ---------- */
+  section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 96px 24px;
+  }
+
+  .section-head {
+    margin-bottom: 48px;
+    max-width: 660px;
+  }
+
+  .section-head h2 {
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 900;
+    color: var(--teal);
+    margin-bottom: 16px;
+  }
+
+  .section-head p {
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .section-rule {
+    width: 72px;
+    height: 3px;
+    background: var(--coral);
+    margin-bottom: 24px;
+  }
+
+  /* ---------- Services ---------- */
+  .services {
+    background: var(--white);
+    max-width: none;
+    margin-top: 96px;
+    padding: 96px 0;
+    border-top: 1px solid rgba(20, 60, 60, 0.08);
+    border-bottom: 1px solid rgba(20, 60, 60, 0.08);
+  }
+
+  .services-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .booking-note-bar {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--cream);
+    border-left: 3px solid var(--coral);
+    padding: 16px 20px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  .booking-note-bar strong {
+    color: var(--teal);
+  }
+
+  .service-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 28px;
+    margin-bottom: 44px;
+    border-bottom: 1px solid rgba(20, 60, 60, 0.12);
+  }
+
+  .cat-btn {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 2px 14px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    margin-bottom: -1px;
+  }
+
+  .cat-btn:hover {
+    color: var(--teal);
+  }
+
+  .cat-btn.active {
+    color: var(--teal);
+    border-bottom-color: var(--coral);
+  }
+
+  .service-group {
+    display: none;
+  }
+
+  .service-group.active {
+    display: block;
+  }
+
+  .service-group-title {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+
+  .service-group-sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    max-width: 640px;
+  }
+
+  .service-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .service-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid rgba(20, 60, 60, 0.1);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(20, 60, 60, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(20, 60, 60, 0.1);
+    border-color: rgba(224, 120, 86, 0.4);
+  }
+
+  .service-card-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+  }
+
+  .service-photo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--cream-dark);
+  }
+
+  .service-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .ph-a { background: linear-gradient(140deg, var(--teal-mid) 0%, var(--teal) 100%); }
+  .ph-b { background: linear-gradient(140deg, var(--coral) 0%, var(--coral-dark) 100%); }
+  .ph-c { background: linear-gradient(140deg, var(--teal-soft) 0%, var(--teal-deep) 100%); }
+  .ph-d { background: linear-gradient(140deg, var(--coral-soft) 0%, var(--coral) 100%); }
+
+  .service-details {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .service-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+
+  .service-time {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .service-card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .service-price {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--coral-dark);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .service-book-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--teal);
+    padding: 9px 20px;
+    border-radius: 100px;
+    flex-shrink: 0;
+    line-height: 1;
+    transition: background 0.2s ease;
+  }
+
+  .service-card:hover .service-book-btn {
+    background: var(--coral);
+  }
+
+  .service-cta {
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .service-cta p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  /* ---------- Portfolio ---------- */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .portfolio-item {
+    aspect-ratio: 3/4;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+  }
+
+  .portfolio-item:hover {
+    transform: scale(1.02);
+  }
+
+  .portfolio-item:nth-child(1) { background: linear-gradient(160deg, #1E5555, #0D2A2A); }
+  .portfolio-item:nth-child(2) { background: linear-gradient(160deg, #E07856, #B85A3E); }
+  .portfolio-item:nth-child(3) { background: linear-gradient(160deg, #2F6B6B, #143C3C); }
+  .portfolio-item:nth-child(4) { background: linear-gradient(160deg, #F2A78F, #E07856); }
+  .portfolio-item:nth-child(5) { background: linear-gradient(160deg, #143C3C, #0D2A2A); }
+  .portfolio-item:nth-child(6) { background: linear-gradient(160deg, #C85F41, #143C3C); }
+
+  .portfolio-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(13, 42, 42, 0.55), transparent);
+  }
+
+  .portfolio-tag {
+    position: relative;
+    z-index: 2;
+    border: 1.5px dashed rgba(250, 245, 239, 0.75);
+    border-radius: 12px;
+    padding: 12px 20px;
+    color: var(--cream);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .portfolio-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 20px;
+    color: var(--white);
+  }
+
+  .portfolio-label strong {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    display: block;
+    line-height: 1.2;
+  }
+
+  .portfolio-label span {
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  .portfolio-note {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .portfolio-note a {
+    color: var(--coral-dark);
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* ---------- About ---------- */
+  .about {
+    background: var(--teal);
+    color: var(--cream);
+    max-width: none;
+  }
+
+  .about-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .about-visual {
+    aspect-ratio: 4/5;
+    border-radius: 4px;
+    background: linear-gradient(160deg, var(--teal-mid) 0%, var(--teal-deep) 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-visual::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(224, 120, 86, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .about-content h2 {
+    font-size: clamp(36px, 4.5vw, 52px);
+    font-weight: 900;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+
+  .about-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(250, 245, 239, 0.85);
+    margin-bottom: 20px;
+  }
+
+  .about-content p strong {
+    color: var(--cream);
+  }
+
+  .about-content a {
+    color: var(--coral-soft);
+    font-weight: 700;
+  }
+
+  .about-content a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Booking CTA ---------- */
+  .booking-cta {
+    background: var(--coral);
+    color: var(--white);
+    max-width: none;
+    text-align: center;
+  }
+
+  .booking-cta-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .booking-cta h2 {
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .booking-cta p {
+    font-size: 19px;
+    line-height: 1.6;
+    opacity: 0.95;
+    margin-bottom: 32px;
+  }
+
+  .booking-cta .btn {
+    background: var(--white);
+    color: var(--coral-dark);
+    font-size: 17px;
+    padding: 16px 36px;
+  }
+
+  .booking-cta .btn:hover {
+    background: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .booking-note {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  /* ---------- Info bar ---------- */
+  .info-bar {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .info-item h3 {
+    font-size: 19px;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+
+  .info-item p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .info-item a {
+    color: var(--coral-dark);
+    font-weight: 700;
+  }
+
+  .info-item a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--teal-deep);
+    color: rgba(250, 245, 239, 0.7);
+    padding: 64px 24px 32px;
+  }
+
+  .footer-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(250, 245, 239, 0.12);
+    margin-bottom: 32px;
+  }
+
+  .footer-brand .logo {
+    color: var(--cream);
+    font-size: 28px;
+  }
+
+  .footer-brand .logo em {
+    color: var(--coral);
+  }
+
+  .footer-brand p {
+    margin-top: 12px;
+    font-size: 15px;
+    max-width: 340px;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 64px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+
+  .footer-col a {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover {
+    color: var(--coral-soft);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+  }
+
+  .footer-bottom a {
+    color: var(--coral-soft);
+  }
+
+  /* ---------- Mobile ---------- */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--teal);
+    z-index: 200;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .mobile-nav.open {
+    display: flex;
+  }
+
+  .mobile-nav a {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--cream);
+  }
+
+  .mobile-nav-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 860px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding-top: 120px;
+    }
+
+    .hero-panel {
+      aspect-ratio: 16/10;
+    }
+
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-visual {
+      aspect-ratio: 16/10;
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: block;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .info-bar {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .service-cats {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-left: -24px;
+      margin-right: -24px;
+      padding-left: 24px;
+      padding-right: 24px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .service-cats::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-btn {
+      flex-shrink: 0;
+    }
+
+    .footer-links {
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio-item {
+      aspect-ratio: 16/10;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">Dolled <em>by</em> Dannie</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About Dannie</a>
+      <a href="https://www.instagram.com/dolledbydannie" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://dolledbydannie.as.me/schedule/e685e15a" class="btn btn-coral" target="_blank" rel="noopener">Book Now</a>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="toggleMobileNav()" aria-label="Close menu">&#10005;</button>
+  <a href="#services" onclick="toggleMobileNav()">Services</a>
+  <a href="#work" onclick="toggleMobileNav()">Work</a>
+  <a href="#about" onclick="toggleMobileNav()">About Dannie</a>
+  <a href="https://www.instagram.com/dolledbydannie" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener" style="color: var(--coral-soft);">Book Now &rarr;</a>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div>
+    <h1>Stitch braids that stay <em>neat</em> for weeks.</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Clean parts, flat installs, and styles that hold. Dannie is a Southfield and Detroit stitch braid specialist, and hair is included with every stitch braid service.</p>
+    <div class="hero-actions">
+      <a href="https://dolledbydannie.as.me/schedule/e685e15a" class="btn btn-coral" target="_blank" rel="noopener">Book Your Appointment &rarr;</a>
+      <a href="#services" class="btn btn-outline">See Services &amp; Prices</a>
+    </div>
+    <p class="hero-meta">Southfield / Detroit, MI<br>Hair included on stitch braids<br>@dolledbydannie on Instagram</p>
+  </div>
+  <div class="hero-panel">
+    <span class="photo-placeholder-tag">Your photo here</span>
+    <div class="hero-panel-caption">
+      <strong>6 Stitch Braids</strong>
+      <span>2 hrs 30 min &middot; $105 &middot; Hair included</span>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-head">
+      <div class="section-rule"></div>
+      <h2>Services &amp; Prices</h2>
+      <p>Every style, every price, right here. Pick your look and book it in two minutes.</p>
+    </div>
+
+    <div class="booking-note-bar">
+      <span><strong>Before your appointment:</strong> Please come washed and fully blow dried, from root to tip. Hair is included with stitch braids and knotless braids.</span>
+    </div>
+
+    <div class="service-cats">
+      <button class="cat-btn active" onclick="showCategory('stitch', this)">Stitch Braids</button>
+      <button class="cat-btn" onclick="showCategory('ponytails', this)">Ponytails & Buns</button>
+      <button class="cat-btn" onclick="showCategory('freestyle', this)">Freestyle</button>
+      <button class="cat-btn" onclick="showCategory('knotless', this)">Knotless Braids</button>
+      <button class="cat-btn" onclick="showCategory('touchups', this)">Touch Ups</button>
+      <button class="cat-btn" onclick="showCategory('more', this)">More Styles</button>
+    </div>
+
+    <div class="service-group active" id="cat-stitch">
+      <h3 class="service-group-title">Stitch Braids</h3>
+      <p class="service-group-sub">Clean parts, flat install, neat for weeks. Hair is included with every stitch braid style.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">6</span><span class="service-details"><span class="service-name">6 Stitch braids</span><span class="service-time">2 hrs 30 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$105</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">8</span><span class="service-details"><span class="service-name">8 Stitch braids</span><span class="service-time">3 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$130</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">1</span><span class="service-details"><span class="service-name">10 Stitch Braids</span><span class="service-time">3 hrs 30 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$155</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <div class="service-group" id="cat-ponytails">
+      <h3 class="service-group-title">Ponytails & Buns</h3>
+      <p class="service-group-sub">Braided ponytails and buns that sit high, sleek, and secure. Hair is included.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">S</span><span class="service-details"><span class="service-name">Small Stitch Ponytail</span><span class="service-time">6 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$290</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">L</span><span class="service-details"><span class="service-name">Large Ponytail/bun (6-8 braids)</span><span class="service-time">4 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$120</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <div class="service-group" id="cat-freestyle">
+      <h3 class="service-group-title">Freestyle</h3>
+      <p class="service-group-sub">Custom stitch designs built around your inspo. Hair is included.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">F</span><span class="service-details"><span class="service-name">Freestyle Stitch Braids</span><span class="service-time">4 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$250</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <div class="service-group" id="cat-knotless">
+      <h3 class="service-group-title">Knotless Braids</h3>
+      <p class="service-group-sub">Lightweight, tension free braids in every size, including goddess and human hair options. Hair is included.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">K</span><span class="service-details"><span class="service-name">Knotless Braids</span><span class="service-time">7 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$290</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess knotless braids</span><span class="service-time">7 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$310</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess Knotless Braids (HUMAN HAIR)</span><span class="service-time">7 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$395</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-d" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess Knotless Braids SHORT</span><span class="service-time">7 hrs 15 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$255</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess Knotless Braids SHORT HUMAN HAIR</span><span class="service-time">7 hrs 15 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$320</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">M</span><span class="service-details"><span class="service-name">Medium Knotless Braids</span><span class="service-time">6 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$270</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">M</span><span class="service-details"><span class="service-name">Medium Goddess Knotless</span><span class="service-time">6 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$290</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-d" aria-hidden="true">M</span><span class="service-details"><span class="service-name">Medium Goddess Knotless (HUMAN HAIR)</span><span class="service-time">6 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$375</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">M</span><span class="service-details"><span class="service-name">Medium Goddess Knotless SHORT</span><span class="service-time">5 hrs 15 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$235</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">M</span><span class="service-details"><span class="service-name">Medium Goddess Knotless SHORT (HUMAN HAIR)</span><span class="service-time">5 hrs 15 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$300</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">L</span><span class="service-details"><span class="service-name">Large knotless Braids</span><span class="service-time">4 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$250</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-d" aria-hidden="true">L</span><span class="service-details"><span class="service-name">Large Knotless Goddess SHORT</span><span class="service-time">4 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$210</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">L</span><span class="service-details"><span class="service-name">Large Goddess Knotless (HUMAN HAIR)</span><span class="service-time">4 hrs 30 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$350</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">J</span><span class="service-details"><span class="service-name">Jumbo Knotless Braids</span><span class="service-time">3 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$210</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">J</span><span class="service-details"><span class="service-name">Jumbo Knotless Goddess SHORT</span><span class="service-time">3 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$185</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-d" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess Half feed-in ponytail (10 braids) / Knotless</span><span class="service-time">5 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$270</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess Half feed-in ponytail (10 braids) / Knotless (HUMAN HAIR)</span><span class="service-time">5 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$365</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">F</span><span class="service-details"><span class="service-name">Flip-over Goddess Knotless SHORT</span><span class="service-time">5 hrs 30 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$230</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">F</span><span class="service-details"><span class="service-name">Flip-over Goddess Knotless SHORT HUMAN HAIR</span><span class="service-time">5 hrs 30 min &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$295</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-d" aria-hidden="true">F</span><span class="service-details"><span class="service-name">Flip over knotless braids</span><span class="service-time">7 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$290</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">F</span><span class="service-details"><span class="service-name">Flip over knotless braids (HUMAN HAIR)</span><span class="service-time">7 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$375</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">D</span><span class="service-details"><span class="service-name">Dolled Feed-in / Knotless</span><span class="service-time">5 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$250</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">H</span><span class="service-details"><span class="service-name">Half feed-in / Half Knotless</span><span class="service-time">7 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$290</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-d" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess Half feed-in / Half Knotless</span><span class="service-time">7 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$310</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess Half Feed in / Half Knotless (HUMAN HAIR)</span><span class="service-time">7 hrs &middot; Hair included</span><span class="service-card-foot"><span class="service-price">$395</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <div class="service-group" id="cat-touchups">
+      <h3 class="service-group-title">Touch Ups</h3>
+      <p class="service-group-sub">Keep your install fresh between full appointments.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess knotless touch up (SHORT)</span><span class="service-time">3 hrs 10 min</span><span class="service-card-foot"><span class="service-price">$115</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">H</span><span class="service-details"><span class="service-name">Half Feed in / Half Knotless Touch up (FRONT ONLY)</span><span class="service-time">2 hrs</span><span class="service-card-foot"><span class="service-price">$85</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">D</span><span class="service-details"><span class="service-name">Dolled Knotless (FRONT touch up)</span><span class="service-time">2 hrs</span><span class="service-card-foot"><span class="service-price">$70</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-d" aria-hidden="true">K</span><span class="service-details"><span class="service-name">Knotless braid touch up</span><span class="service-time">3 hrs 10 min</span><span class="service-card-foot"><span class="service-price">$120</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">G</span><span class="service-details"><span class="service-name">Goddess Knotless touch up</span><span class="service-time">3 hrs 20 min</span><span class="service-card-foot"><span class="service-price">$135</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <div class="service-group" id="cat-more">
+      <h3 class="service-group-title">More Styles</h3>
+      <p class="service-group-sub">Men's styles, Miracle Knots, and natural hair. Individuals and 6 Stitch Braids are men's styles.</p>
+      <ul class="service-list">
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-a" aria-hidden="true">I</span><span class="service-details"><span class="service-name">Individuals</span><span class="service-time">2 hrs 30 min</span><span class="service-card-foot"><span class="service-price">$125</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-b" aria-hidden="true">6</span><span class="service-details"><span class="service-name">6 Stitch Braids</span><span class="service-time">2 hrs 30 min</span><span class="service-card-foot"><span class="service-price">$70</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-c" aria-hidden="true">M</span><span class="service-details"><span class="service-name">Miracle Knots</span><span class="service-time">6 hrs</span><span class="service-card-foot"><span class="service-price">$200</span><span class="service-book-btn">Book</span></span></span></a></li>
+        <li class="service-card"><a class="service-card-link" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener"><span class="service-photo service-photo-placeholder ph-d" aria-hidden="true">N</span><span class="service-details"><span class="service-name">Natural Hair Individuals</span><span class="service-time">4 hrs 30 min</span><span class="service-card-foot"><span class="service-price">$155</span><span class="service-book-btn">Book</span></span></span></a></li>
+      </ul>
+    </div>
+
+    <div class="service-cta">
+      <p>Not sure which style is right for you? Send Dannie a DM on Instagram with your inspo pic.</p>
+      <a href="https://www.instagram.com/dolledbydannie" class="btn btn-teal" target="_blank" rel="noopener">DM @dolledbydannie</a>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="work">
+  <div class="section-head">
+    <div class="section-rule"></div>
+    <h2>Recent Work</h2>
+    <p>A look at the styles coming out of Dannie's chair. Real client photos will fill these frames on the finished site.</p>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <span class="portfolio-tag">Your photo here</span>
+      <div class="portfolio-label"><strong>6 Stitch Braids</strong><span>2 hrs 30 min &middot; $105</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="portfolio-tag">Your photo here</span>
+      <div class="portfolio-label"><strong>Small Stitch Ponytail</strong><span>6 hrs &middot; $290</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="portfolio-tag">Your photo here</span>
+      <div class="portfolio-label"><strong>Freestyle Stitch Braids</strong><span>4 hrs &middot; $250</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="portfolio-tag">Your photo here</span>
+      <div class="portfolio-label"><strong>Goddess Knotless Braids</strong><span>7 hrs &middot; $310</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="portfolio-tag">Your photo here</span>
+      <div class="portfolio-label"><strong>Large Ponytail / Bun</strong><span>4 hrs &middot; $120</span></div>
+    </div>
+    <div class="portfolio-item">
+      <span class="portfolio-tag">Your photo here</span>
+      <div class="portfolio-label"><strong>Jumbo Knotless Braids</strong><span>3 hrs &middot; $210</span></div>
+    </div>
+  </div>
+
+  <p class="portfolio-note">See the latest work on Instagram: <a href="https://www.instagram.com/dolledbydannie" target="_blank" rel="noopener">@dolledbydannie</a></p>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-visual">
+      <span class="photo-placeholder-tag">Your photo here</span>
+    </div>
+    <div class="about-content">
+      <div class="section-rule"></div>
+      <h2>Meet Dannielle</h2>
+      <p>Dannielle is a Detroit and Southfield braider known for one thing above all else: <strong>stitch braids that stay neat for weeks.</strong> Clean parts, smooth feedins, and a flat install that grows out gracefully instead of frizzing up by day three.</p>
+      <p>Her chair is built on consistency. Every stitch braid service includes the hair, every appointment starts on time, and every client leaves with a style that looks just as good in week three as it did on day one.</p>
+      <p>With 18K followers on Instagram, her work speaks for itself. Follow <a href="https://www.instagram.com/dolledbydannie" target="_blank" rel="noopener">@dolledbydannie</a> to see the latest styles, openings, and client transformations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Booking CTA -->
+<section class="booking-cta">
+  <div class="booking-cta-inner">
+    <h2>Ready to get dolled up?</h2>
+    <p>Pick your style, pick your time, and you are booked. No waiting for a reply, no back and forth. Just show up washed and blow dried, and leave dolled.</p>
+    <a href="https://dolledbydannie.as.me/schedule/e685e15a" class="btn" target="_blank" rel="noopener">Book Now &rarr;</a>
+    <p class="booking-note">Booking powered by Acuity Scheduling &middot; Please come washed and fully blow dried</p>
+  </div>
+</section>
+
+<!-- Info bar -->
+<div class="info-bar">
+  <div class="info-item">
+    <h3>Location</h3>
+    <p>Southfield / Detroit, Michigan<br>Exact address is shared after booking confirmation.</p>
+  </div>
+  <div class="info-item">
+    <h3>Follow Dannie</h3>
+    <p>See the latest styles, openings, and deals on Instagram.<br><a href="https://www.instagram.com/dolledbydannie" target="_blank" rel="noopener">@dolledbydannie &rarr;</a></p>
+  </div>
+  <div class="info-item">
+    <h3>Questions?</h3>
+    <p>Call or text <a href="tel:+18325800756">(832) 580-0756</a> or DM Dannie on Instagram for custom styles and consultations.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">Dolled <em>by</em> Dannie</a>
+        <p>Southfield and Detroit stitch braid specialist. Clean parts, flat installs, hair included.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Stitch Braids</a>
+          <a href="#services">Knotless Braids</a>
+          <a href="#services">Ponytails &amp; Buns</a>
+          <a href="#services">Freestyle</a>
+          <a href="#services">Touch Ups</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://www.instagram.com/dolledbydannie" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener">Book Now</a>
+          <a href="tel:+18325800756">(832) 580-0756</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Dolled by Dannie &middot; Southfield / Detroit, MI</span>
+      <span>Demo site built by <a href="https://rishaofficial.github.io/lexis-sapphire-studio/" target="_blank" rel="noopener">Lexis Sapphire Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function showCategory(catId, btn) {
+    document.querySelectorAll('.service-group').forEach(g => g.classList.remove('active'));
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('cat-' + catId).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Falling autumn leaves
+  (function() {
+    const leaves = ['\uD83C\uDF42', '\uD83C\uDF41', '\uD83C\uDF43'];
+    const isMobile = window.innerWidth < 768;
+    const count = isMobile ? 6 : 12;
+    const minDuration = isMobile ? 12 : 8;
+    const durationRange = isMobile ? 8 : 8;
+
+    for (let i = 0; i < count; i++) {
+      const leaf = document.createElement('span');
+      leaf.className = 'falling-leaf';
+      leaf.textContent = leaves[Math.floor(Math.random() * leaves.length)];
+      leaf.style.left = Math.random() * 100 + 'vw';
+      leaf.style.fontSize = (16 + Math.random() * 12) + 'px';
+      leaf.style.animationDuration = (minDuration + Math.random() * durationRange) + 's';
+      leaf.style.animationDelay = (-Math.random() * 14) + 's';
+      document.body.appendChild(leaf);
+    }
+  })();
+</script>
+
+</body>
+</html>
