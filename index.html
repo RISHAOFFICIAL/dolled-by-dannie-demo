@@ -61,6 +61,13 @@
     box-shadow:var(--shadow-sm);
     transform:rotate(-4deg);
   }
+  .logo-img{
+    width:52px;height:52px;object-fit:cover;
+    border:var(--border);border-radius:18px;
+    box-shadow:var(--shadow-sm);
+    transform:rotate(-4deg);
+    background:#fff;
+  }
   .logo-text{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;letter-spacing:-.5px;}
   .logo-text span{color:var(--pink);}
   .nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
@@ -105,6 +112,12 @@
   .tile-cream{background:#fff;}
   .tile-yellow{background:var(--yellow);}
   .tile-gradient{background:linear-gradient(135deg,var(--pink) 0%,var(--purple) 100%);color:#fff;}
+  .tile-photo{padding:0;min-height:240px;}
+  .tile-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .tile-bg-photo{padding:0;color:#fff;}
+  .tile-bg-photo .bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .tile-bg-photo .bg-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,46,136,.88) 0%,rgba(123,47,255,.82) 100%);}
+  .tile-bg-photo .bg-content{position:relative;z-index:2;padding:28px;display:flex;flex-direction:column;gap:12px;justify-content:center;height:100%;}
   .tile-soft-pink{background:var(--pink-soft);}
   .tile-soft-purple{background:var(--purple-soft);}
   .tile-soft-yellow{background:var(--yellow-soft);}
@@ -172,6 +185,11 @@
   }
   .service:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
   .service .emoji{font-size:34px;line-height:1;}
+  .service-img{
+    width:100%;height:170px;object-fit:cover;
+    border:3px solid var(--ink);border-radius:16px;
+  }
+  .service.large .service-img{height:220px;}
   .service h4{
     font-family:'Bricolage Grotesque',sans-serif;
     font-size:20px;font-weight:800;line-height:1.15;
@@ -223,6 +241,11 @@
     font-size:clamp(52px,7vw,84px);font-weight:800;line-height:1;
   }
   .featured .feat-emoji{font-size:clamp(80px,12vw,140px);line-height:1;text-align:center;}
+  .feat-photo{
+    width:100%;height:100%;min-height:300px;object-fit:cover;
+    border:3px solid #fff;border-radius:20px;
+    box-shadow:4px 4px 0 rgba(0,0,0,.25);
+  }
   .featured .feat-meta{font-weight:900;font-size:17px;margin-top:6px;}
 
   /* ---------- ABOUT BENTO ---------- */
@@ -243,6 +266,11 @@
   .about-card ul li::before{content:"✦ ";color:var(--pink);font-weight:900;}
   .about-card.tall-card{grid-row:span 2;}
   .about-emoji{font-size:44px;line-height:1;}
+  .about-logo{
+    width:100%;max-width:220px;
+    border:var(--border);border-radius:16px;
+    box-shadow:var(--shadow-sm);background:#fff;
+  }
 
   /* ---------- BOOKING CTA ---------- */
   .cta-block{
@@ -338,7 +366,7 @@
 <nav>
   <div class="nav-inner">
     <a class="logo" href="#">
-      <span class="logo-badge">D</span>
+      <img class="logo-img" src="images/dannie-logo.jpg" alt="Dolled by Dannie logo">
       <span class="logo-text">Dolled <span>by Dannie</span></span>
     </a>
     <div class="nav-links">
@@ -375,13 +403,23 @@
         <h2 style="font-size:28px;">Hair Included</h2>
         <p>Most styles include the hair. Just show up ready to get dolled.</p>
       </div>
-      <div class="tile tile-gradient span-2">
-        <div class="tile-emoji">✨</div>
-        <h2 style="font-size:30px;">Your next look is one tap away</h2>
-        <p>Pick your style, grab your time, and let Dannie do the rest.</p>
-        <div class="hero-cta-row">
-          <a class="btn btn-white" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener">Book Now</a>
+      <div class="tile tile-bg-photo span-2">
+        <img class="bg-img" src="images/dannie-boho-2.jpg" alt="Two-tone boho braids by Dolled by Dannie">
+        <div class="bg-overlay"></div>
+        <div class="bg-content">
+          <div class="tile-emoji">✨</div>
+          <h2 style="font-size:30px;">Your next look is one tap away</h2>
+          <p>Pick your style, grab your time, and let Dannie do the rest.</p>
+          <div class="hero-cta-row">
+            <a class="btn btn-white" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener">Book Now</a>
+          </div>
         </div>
+      </div>
+      <div class="tile tile-photo span-2">
+        <img src="images/dannie-knotless-3.jpg" alt="Fresh knotless braids by Dolled by Dannie">
+      </div>
+      <div class="tile tile-photo span-2">
+        <img src="images/dannie-boho-1.jpg" alt="Boho braids with curls by Dolled by Dannie">
       </div>
     </div>
   </div>
@@ -404,7 +442,7 @@
   <div class="services-grid">
     <div class="service card-pink large span-2">
       <span class="popular-tag">Most booked</span>
-      <div class="emoji">🧵</div>
+      <img class="service-img" src="images/dannie-mens-1.jpg" alt="Clean stitch braids by Dolled by Dannie">
       <h4>6 Stitch Braids</h4>
       <div class="meta">2 hrs 30 min</div>
       <div class="price">$105</div>
@@ -461,7 +499,7 @@
   <div class="services-grid">
     <div class="service card-hot large span-2">
       <span class="popular-tag">Most booked</span>
-      <div class="emoji">👑</div>
+      <img class="service-img" src="images/dannie-knotless-2.jpg" alt="Knotless braids by Dolled by Dannie">
       <h4>Knotless Braids</h4>
       <div class="meta">7 hrs</div>
       <div class="price">$290</div>
@@ -470,7 +508,7 @@
     </div>
     <div class="service card-purple large span-2">
       <span class="popular-tag">Fan favorite</span>
-      <div class="emoji">🌸</div>
+      <img class="service-img" src="images/dannie-goddess-1.jpg" alt="Burgundy goddess knotless braids by Dolled by Dannie">
       <h4>Goddess Knotless Braids</h4>
       <div class="meta">7 hrs</div>
       <div class="price">$310</div>
@@ -591,7 +629,7 @@
   <div class="services-grid">
     <div class="service card-yellow large span-2">
       <span class="popular-tag">Trending</span>
-      <div class="emoji">🦋</div>
+      <img class="service-img" src="images/dannie-knotless-1.jpg" alt="Knotless braids in a ponytail by Dolled by Dannie">
       <h4>Goddess Half Feed-In Ponytail (10 braids) / Knotless</h4>
       <div class="meta">5 hrs</div>
       <div class="price">$270</div>
@@ -639,7 +677,7 @@
       <div class="book-row"><a class="btn btn-book" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener">Book</a></div>
     </div>
     <div class="service card-pink">
-      <div class="emoji">💖</div>
+      <img class="service-img" src="images/dannie-acuity-1.jpg" alt="Dolled feed-in knotless braids by Dolled by Dannie">
       <h4>Dolled Feed-In / Knotless</h4>
       <div class="meta">5 hrs</div>
       <div class="price">$250</div>
@@ -729,7 +767,7 @@
       <div class="book-row"><a class="btn btn-book" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener">Book</a></div>
     </div>
     <div class="service card-cream">
-      <div class="emoji">👨</div>
+      <img class="service-img" src="images/dannie-acuity-2.jpg" alt="Mens stitch braids by Dolled by Dannie">
       <h4>6 Stitch Braids (Mens)</h4>
       <div class="meta">2 hrs 30 min</div>
       <div class="price">$70</div>
@@ -765,7 +803,7 @@
         <a class="btn btn-white" href="https://dolledbydannie.as.me/schedule/e685e15a" target="_blank" rel="noopener">Book Goddess Knotless</a>
       </div>
     </div>
-    <div class="feat-emoji">👑🌸✨</div>
+    <div><img class="feat-photo" src="images/dannie-boho-3.jpg" alt="Goddess knotless braids with curls by Dolled by Dannie"></div>
   </div>
 </section>
 
@@ -776,7 +814,7 @@
   </div>
   <div class="about-grid">
     <div class="about-card tile-soft-pink">
-      <div class="about-emoji">💖</div>
+      <img class="about-logo" src="images/dannie-logo.jpg" alt="Dolled by Dannie, Luxury Braiding Studio logo">
       <h3>Meet Dannie</h3>
       <p>Your Detroit area braider for knotless, stitch, feed-in and goddess styles. 18K strong on Instagram and growing, one flawless install at a time.</p>
       <p>Every style is done with care, clean parts, and attention to detail, so you leave feeling dolled and confident.</p>
